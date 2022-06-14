@@ -30,20 +30,9 @@ public class Logincontrol extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Logincontrol</title>");  
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Logincontrol at " + request.getContextPath () + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+           request.getRequestDispatcher("view/account/login.jsp").forward(request, response);
         }
-    } 
+        
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /** 
@@ -69,14 +58,21 @@ public class Logincontrol extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        processRequest(request, response);
-        HttpSession session = request.getSession();
-
-        String user = request.getParameter("username");
-        String pass = request.getParameter("password");
-
-       AccountDBContext db = new AccountDBContext();
-        String checkPass = db.getPass(user);
+      // processRequest(request, response);
+         String user_name = request.getParameter("Username");
+        String password = request.getParameter("Password");
+        AccountDBContext db = new AccountDBContext();
+        Account account = db.getAccountByUsernamePassword(user_name, password);
+        if(account != null)
+        {
+            request.getRequestDispatcher("view/account/home.jsp").forward(request, response);
+        }
+        else
+        {
+            response.getWriter().println("login failed!");
+             response.getWriter().println("Incorrect username or password");
+            response.getWriter().println("please return to the page /login");
+        }
     }
 
     /** 
