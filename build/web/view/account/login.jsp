@@ -39,6 +39,7 @@ body {
 </style>
 </head>
 <body>
+    <form action="login" method="post"> 
 <div id="login">
         <h3 class="text-center text-white pt-5">FPT University Academic Portal</h3>
         <div class="container">
@@ -63,11 +64,13 @@ body {
                                 <a href="#" class="text-info">Register here</a>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </form>
 </body>
 </html>
 

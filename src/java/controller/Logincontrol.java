@@ -30,7 +30,7 @@ public class Logincontrol extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-           request.getRequestDispatcher("view/account/login.jsp").forward(request, response);
+     
         }
         
 
@@ -45,7 +45,7 @@ public class Logincontrol extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        processRequest(request, response);
+        request.getRequestDispatcher("view/account/login.jsp").forward(request, response);
     } 
 
     /** 
@@ -62,7 +62,7 @@ public class Logincontrol extends HttpServlet {
          String user_name = request.getParameter("Username");
         String password = request.getParameter("Password");
         AccountDBContext db = new AccountDBContext();
-        Account account = db.getAccountByUsernamePassword(user_name, password);
+        Account account = db.login(user_name, password);
         if(account != null)
         {
             request.getRequestDispatcher("view/account/home.jsp").forward(request, response);
