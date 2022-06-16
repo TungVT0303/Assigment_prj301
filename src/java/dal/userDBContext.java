@@ -43,8 +43,8 @@ public class userDBContext extends DBContext<Account> {
         return users;
     }
     public static void main(String[] args) {
-         userDBContext dao = new userDBContext();
-         ArrayList<Account> list = dao.list();
+         userDBContext dal = new userDBContext();
+         ArrayList<Account> list = dal.list();
         
             for (Account object : list) {
                 System.out.println(object.toString());

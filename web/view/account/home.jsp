@@ -15,7 +15,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-         <div class="alert alert-success text-center">
+         <div class="">
     <h1>FPT University Academic Portal</h1>
 </div>
  <nav>
