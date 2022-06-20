@@ -34,7 +34,6 @@
   <h3>Information Access(Tra cứu thông tin)</h3>
   </div>
   <div>               
-          <a href="timetable">Weekly timetable(Thời khóa biểu từng tuần)</a><br>
           <a href="attendanceview">Attendance report(Báo cáo điểm danh)</a><br>
           <a href="Markview">Mark Report (Báo cáo điểm)</a>
                 
