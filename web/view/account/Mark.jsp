@@ -15,9 +15,15 @@
 <div class="">
     <h1>FPT University Academic Portal</h1>
 </div>
-
+ <nav>
+   <ul>
+    <li><a class="active" href="home">Home</a></li>
+   
+    <li>><a href="login">Sign out</a></li>
+   </ul>
+</nav>
         <form method="get" action="mark">
-            <p style="background:#717D7D;font-size: 22px"><a href="view/account/home.jsp"> Home </a>|MARK REPORT</p>
+            <p style="background:#717D7D;font-size: 22px">MARK REPORT</p>
             
             <h1>Grade report for Thanh Tung</h1>
             <div style="padding-left: 50px; width:250px;float: left;">
