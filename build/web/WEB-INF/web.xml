@@ -16,6 +16,10 @@
         <servlet-name>AttendanceControl</servlet-name>
         <servlet-class>controller.AttendanceControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewAttenControl</servlet-name>
+        <servlet-class>controller.ViewAttenControl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Logincontrol</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>AttendanceControl</servlet-name>
         <url-pattern>/attendance</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewAttenControl</servlet-name>
+        <url-pattern>/viewatten</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
